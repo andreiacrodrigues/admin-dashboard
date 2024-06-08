@@ -1,56 +1,59 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html, body{
     margin: 0;
     padding: 0;
+    height:100%; 
 }
 
 body{
     display: grid;
+    grid-template-columns: auto 3fr;
+    grid-template-rows: auto 1fr;
+    font-family:"Roboto", 'Times New Roman', Times, serif;
+    min-width: 1050px;
     height: 100vh;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 3fr;
 }
 
 .header{
-    background-color: rgb(155, 155, 234);
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
     grid-column: 2/5;
     grid-row:1/2; 
-    display: grid;
+    
 }
 
 .sidebar{
     display: grid;
-    background-color: pink;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr 1fr;
+    background-color: #438ab1;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 1fr;
     grid-column: 1/2;
     grid-row: 1/4;
 }
 
 .main-content{
     display: grid;
-    background-color: goldenrod;
-    grid-template-columns: 3fr;
-    grid-template-rows: 3fr;
-    grid-column: 2/5;
-    grid-row: 2/5;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    height: 100%;
 }
 
 /*HEADER*/
 
 .header-up{
-    background-color: brown;
+    background-color: #0759855c;
+    display:grid;
     grid-column: 1/2;
     grid-row:1/2;
-    display:grid;
     grid-auto-flow: column;
     align-items: center;
     grid-gap:4px;
 }
 
 .header-down{
-    background-color: hotpink;
+    background-color:#0759855c;
     grid-column: 1/2;
     grid-row:2/3;
     display: grid;
@@ -59,31 +62,51 @@ body{
     grid-gap:4px;
 }
 
+/*HEADER ------ HEADER-UP*/
+
+#img-find, #img-notifications, #img-perfil, #name {
+    display: grid;
+    margin:10px;
+}
+
 #write{
-    background-color: grey;
+    background-color: rgb(248, 242, 242);
     border-radius: 5px;
     border: 1px solid white;
     width:40vw;
     height: 3vh;
+    padding: 0;
+    margin:0;
+    display: grid;
 }
+
+/*HEADER ------ HEADER-DOWN*/
 
 .username{
     display: grid; 
+    margin:0;
+    padding:0;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+}
+
+button{
+    border-radius: 5px;
+    width:10vw;
+    height: 30px;
+    margin:5px;
 }
 
 /*SIDEBAR*/
-
-#logo{
-    background-color: rgb(47, 91, 201);
-}
-
 #operation-one{
-    background-color: yellow;
     grid-template-rows: repeat(6, min-content)
 }
 
 #operation-two{
-    background-color: chocolate;
     grid-template-rows: repeat(3, min-content)
 }
 
@@ -96,7 +119,7 @@ body{
 #logo div, #operation-one div, #operation-two div {
     margin:0;
     padding: 10px;
-    
+    padding-left: 15px;  
 }
 
 
@@ -105,73 +128,112 @@ body{
 
 .content{
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: repeat(3,auto)
 }
 
 .leftside{
     display:grid;
-    border: 1px solid black;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
     grid-template-rows: auto 1fr 1fr 1fr;
 }
 
 .rightside{
     display:grid;
-    border: 1px solid black;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     grid-template-rows: auto 2fr auto 2fr;
 }
 
-#sub1{
+#subtitle1{
     display: grid;
     grid-column: 1/3;
     grid-row:1/2;
     margin:2px;
-    border: 2px solid pink;
 }
 
-#sub2{
+#subtitle2{
     display: grid;
     grid-column: 1/2; 
     grid-row:1/2;
-    border: 2px solid pink;
 } 
 
-#sub3{
+#subtitle3{
     display: grid;
     grid-column: 1/2; 
     grid-row:3/4;
-    border: 2px solid pink;
 }
 
-#sub1 #sub2 #sub3{
-    background-color: rgb(11, 184, 51);
-}
 
 h1{
     padding: 5px;
-    background-color: blueviolet;
 }
 
+/*MAIN-CONTENT -------LEFTSIDE----- NOTE*/
+
+.note{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: 15px;
+}
+
+.info-note{
+    background-color: rgba(53, 57, 56, 0.236);
+    border: 2px solid rgba(42, 42, 43, 0.125);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column: 1/3;
+    grid-template-rows: auto auto;
+    grid-column: 1/3;
+    border-radius:10px;
+    max-height: 300px;
+    min-width: 200px;
+}
+
+.data-note{
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: 5px;
+}
+
+.yellow-note{
+    background-color: rgb(241, 241, 30);
+    display: grid;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    padding: 2px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.share-note{
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    grid-auto-flow: column;
+    justify-items: end;
+    padding: 10px;
+}
+
+/*MAIN-CONTENT ----- RIGHTSIDE ---- INFO-UP*/
 .info-up{
     display: grid;
     grid-row:2/3;
-    border: 2px solid green;
+    border: 2px solid rgba(17, 17, 17, 0.257);
 }
 
 .table-up{
     display: grid;
-    background-color: firebrick;
     align-items: stretch;
     padding: 20px;
 }
 
 .table-up > div{
     display: grid;
-    border: 2px solid green;
 }
 
+
+/*MAIN-CONTENT ----- RIGHTSIDE ------ INFO-DOWN*/
 
 .info-down{
     display: grid;
@@ -180,27 +242,21 @@ h1{
 
 .table-down{
     display: grid;
-    background-color: coral;
     align-items: stretch;
     padding: 20px;
+    border: 2px solid rgba(17, 17, 17, 0.257);
 }
 
-.table-down > div{
+.trends{
     display: grid;
-    border: 2px solid rgb(0, 0, 255);
+    grid-template-columns: auto 1fr;
+    grid-column: 1/2;
+    grid-template-rows: repeat(5, auto);
+    align-items: center;
 }
 
 
-.note{
-    border: 2px solid red;
-    background-color: rgb(188, 188, 97);
-    padding: 20px;
-}
-
-.info-note{
-    background-color: rgb(66, 141, 116);
-    border: 2px solid blueviolet;
-}
+/*IMAGES*/
 
 img{
     width: 20px;
@@ -208,29 +264,76 @@ img{
     margin-right: 10px;
 }
 
-#logo > div, #operation-one > div, #operation-two > div{
-    background-color: darkmagenta;
-    padding-left: 15px;  
-}
-
-#logo-info{
-   font-size: 24px;
+#img-find{
+    margin-left:20px;
 }
 
 #logo-img{
     width:50px;
     height:50px;
+    
 }
 
-
 #img-user-p{
-    width:40px;
-    height:40px;
+    width:50px;
+    height:50px;
     border-radius: 50%;
+    margin-left:10px;
+    border:1px solid rgba(0, 0, 0, 0.278);
 }
 
 #img-user-g{
-    width:80px;
-    height:80px;
+    width:70px;
+    height:70px;
     border-radius: 50%;
+    margin: 5px;
+    margin-left:15px;
+    display: grid;
+}
+
+/*FONT-SIZES*/
+
+ #name{
+    font-size: large;
+    font-weight: bold;
+ }
+
+ #saudation{
+    font-size:small
+ }
+
+ #user{
+    font-size:large
+ }
+
+ #logo-info{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+h1{
+    font-size:20px;
+    margin-left:10px;
+  
+}
+
+h2{
+    font-size: 16px;
+    margin: 5px;
+}
+
+h3{
+    font-size: 16px;
+}
+
+ p{
+    padding: 0;
+    margin:0;
+}
+
+.table-up p{
+    font-size:13px;
+}
+.table-down p{
+    font-size: 13px;
 }
