@@ -101,6 +101,10 @@ button{
     margin:5px;
 }
 
+button:hover{
+    background-color: grey;
+}
+
 /*SIDEBAR*/
 #operation-one{
     grid-template-rows: repeat(6, min-content)
@@ -129,7 +133,8 @@ button{
 .content{
     display: grid;
     grid-template-columns: auto auto 1fr;
-    grid-template-rows: repeat(3,auto)
+    grid-template-rows: repeat(3,auto);
+    background-color: rgba(208, 197, 197, 0.346);
 }
 
 .leftside{
@@ -178,8 +183,8 @@ h1{
 }
 
 .info-note{
-    background-color: rgba(53, 57, 56, 0.236);
-    border: 2px solid rgba(42, 42, 43, 0.125);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(17, 17, 17, 0.257);
     display: grid;
     grid-template-columns: auto auto;
     grid-column: 1/3;
@@ -198,7 +203,7 @@ h1{
 }
 
 .yellow-note{
-    background-color: rgb(241, 241, 30);
+    background-color: rgb(198, 198, 90);
     display: grid;
     grid-column: 1/2;
     grid-row: 1/3;
@@ -220,6 +225,9 @@ h1{
     display: grid;
     grid-row:2/3;
     border: 2px solid rgba(17, 17, 17, 0.257);
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
 }
 
 .table-up{
@@ -232,19 +240,26 @@ h1{
     display: grid;
 }
 
+#table-up-one, #table-up-two{
+    border-bottom: 1px solid grey;
+}
+
 
 /*MAIN-CONTENT ----- RIGHTSIDE ------ INFO-DOWN*/
-
-.info-down{
-    display: grid;
-    grid-row:4/5;
-}
 
 .table-down{
     display: grid;
     align-items: stretch;
     padding: 20px;
     border: 2px solid rgba(17, 17, 17, 0.257);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+.info-down{
+    display: grid;
+    grid-row:4/5;
+    margin: 10px;
 }
 
 .trends{
@@ -253,6 +268,12 @@ h1{
     grid-column: 1/2;
     grid-template-rows: repeat(5, auto);
     align-items: center;
+    margin-bottom:5px;
+}
+
+.name-trends{
+    font-weight: bold;
+    margin:5px;
 }
 
 
@@ -324,6 +345,7 @@ h2{
 
 h3{
     font-size: 16px;
+    margin-bottom:0px;
 }
 
  p{
